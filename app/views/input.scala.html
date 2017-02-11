@@ -1,0 +1,22 @@
+@*
+* This template takes a single argument, a String containing a
+* message to display.
+*@
+@(message: String)
+@*
+* Call the `main` template with two arguments. The first
+* argument is a `String` with the title of the page, the second
+* argument is an `Html` object containing the body of the page.
+*@
+@main("InputPage") {
+	<div>
+		<h1>@message</h1>
+		<form action="/output" method="post">
+			名前:<input type="text" name="name"><br>
+			年齢:<input type="text" name="age"><br>
+			性別:<input type="radio" name="sex" value="male">男 <input type="radio" name="sex" value="female">女<br>
+			<input type="submit" value="送信">
+		</form>
+
+	</div>
+}

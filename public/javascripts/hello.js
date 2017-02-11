@@ -5,3 +5,7 @@ if (window.console) {
 function popmessage(){
   return"JSからの呼び出し";
 }
+
+function gotoInput() {
+  location.href="/input";
+}

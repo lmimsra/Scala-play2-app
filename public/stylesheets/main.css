@@ -1,4 +1,15 @@
-.body-back{
+.body-back {
     background-color: lightskyblue;
+    width: auto;
+}
 
+.objectCenter{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.menuButton {
+    width: 100px;
+    height: 50px;
 }
