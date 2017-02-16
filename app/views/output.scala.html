@@ -1,4 +1,4 @@
-@(message: String)
+@(name: String, age:Int, sex:String, place:String)
 @*
 * Call the `main` template with two arguments. The first
 * argument is a `String` with the title of the page, the second
@@ -7,6 +7,11 @@
 @main("InputPage") {
 	<div>
 		<h1>出力ページ</h1>
-<output>@message</output>
+		<p>@name</p>
+		<p>@age</p>
+		<p>@sex</p>
+		<p>@place</p>
+		<button onclick="gotoInput()">入力ページに戻る</button>
+		<button onclick="gotoTop()">トップページに戻る</button>
 	</div>
 }

@@ -7,7 +7,7 @@ This file will be packaged with your application when using `activator dist`.
 
 There are several demonstration files available in this template.
 
-Controllers
+コントローラー
 ===========
 
 - HomeController.scala:
@@ -23,7 +23,7 @@ Controllers
   Shows how to inject a component into a controller and use the component when
   handling requests.
 
-Components
+コンポーネント
 ==========
 
 - Module.scala:

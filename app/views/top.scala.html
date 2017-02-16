@@ -1,12 +1,33 @@
 @(mainTitle: String)
 @main("TopPage") {
 	<div class="objectCenter">
-	<h1>@mainTitle</h1>
-	<table align="center">
-		<tr>
-			<td>入力画面：</td>
-			<td><button class="menuButton" onclick="gotoInput()">遷移</button></td>
-		</tr>
-	</table>
+		<h1 align="center">@mainTitle</h1>
+		<table align="center">
+			<tr>
+				<td>入力画面：</td>
+				<td><button class="menuButton" onclick="gotoInput()">遷移</button></td>
+			</tr>
+			<tr>
+				<td>ウェルカムページ：</td>
+				<td><button class="menuButton" onclick="gotoWellcome()">遷移</button></td>
+			</tr>
+			<tr>
+				<td>カウンター：</td>
+				<td><button class="menuButton" onclick="gotoCount()">遷移</button></td>
+			</tr>
+			<tr>
+				<td>メッセージ：</td>
+				<td><button class="menuButton" onclick="gotoMessage()">遷移</button></td>
+			</tr>
+		</table>
+		<br/>
+		<hr/>
+		<h3 style="margin: 0px 0px">メモ書き</h3>
+		// 変更可能なフィールド<br/>
+		var var_id:Int = 1;<br/>
+		// 不変なフィールド<br/>
+		val val_id:Int = 2;<br/>
+		// 外部から参照できないフィールド<br/>
+		private val private_id = 999;<br/>
 	</div>
 }
