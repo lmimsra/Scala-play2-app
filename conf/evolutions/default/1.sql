@@ -1,0 +1,10 @@
+# --- !Ups
+
+CREATE TABLE "CAT" (
+  "NAME" VARCHAR(45) NOT NULL PRIMARY KEY,
+  "COLOR" VARCHAR(45) NOT NULL
+);
+
+# --- !Downs
+
+DROP TABLE "CAT";

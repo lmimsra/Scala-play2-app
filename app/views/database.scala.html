@@ -1,0 +1,15 @@
+@(name: Boolean)
+@*
+* Call the `main` template with two arguments. The first
+* argument is a `String` with the title of the page, the second
+* argument is an `Html` object containing the body of the page.
+*@
+@main("InputPage") {
+	<div>
+		<h1>出力ページ</h1>
+		@if(name==true){
+			<p>処理が成功しました</p>
+		}
+		<button onclick="gotoTop()">トップページに戻る</button>
+	</div>
+}
