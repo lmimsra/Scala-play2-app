@@ -1,15 +1,29 @@
-@(name: Boolean)
+@(books: Seq[Book])
 @*
 * Call the `main` template with two arguments. The first
 * argument is a `String` with the title of the page, the second
 * argument is an `Html` object containing the body of the page.
 *@
-@main("InputPage") {
+@main("DBAccess") {
 	<div>
-		<h1>出力ページ</h1>
-		@if(name==true){
-			<p>処理が成功しました</p>
-		}
+		<h1>DB接続ページ</h1>
+		<h3>Insert a book hare</h3>
+		<form action="/insert/book" method="post">
+			<input name="id" type="number" placeholder="input id"/>
+			<input name="title" type="text" placeholder="input title"/>
+			<input name="author_id" type="number" placeholder="input author id"/>
+			<input type="submit"/>
+		</form>
+
+		<h3>all tables</h3>
+		<table>
+			<tr><th>id</th><th>title</th><th>author_id</th></tr>
+			@for(b <- books){
+				<tr><td>@b.id</td><td>@b.title</td><td>@b.author_id</td></tr>
+			}
+		</table>
+
+
 		<button onclick="gotoTop()">トップページに戻る</button>
 	</div>
 }

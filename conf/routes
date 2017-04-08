@@ -18,4 +18,6 @@ GET         /input               controllers.HomeController.inputPage
 
 POST        /output              controllers.UserController.outputPage
 
-GET         /outdata             controllers.DataController.testOut
+GET         /indexing            controllers.DataController.indexing
+
+POST        /insert/book         controllers.DataController.insertData

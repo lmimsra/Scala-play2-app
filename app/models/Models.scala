@@ -1,6 +1,7 @@
 package models
 
 /**
-  * Created by mmr on 2017/02/22.
+  * Created by mmr on 2017/04/08.
   */
-case class Cat(name: String, color: String)
+
+case class Book(id:Long,title:String,author_id:Long)
