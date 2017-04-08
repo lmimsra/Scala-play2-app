@@ -21,4 +21,6 @@ class UserController extends Controller {
     Ok(views.html.output(inUser.name,inUser.age,inUser.sex,inUser.other.place))
   }
 
+
+
 }
