@@ -17,7 +17,7 @@ class BookDAO @Inject()(protected val dbConfigProvider:DatabaseConfigProvider) e
   import driver.api._
   private val Books = TableQuery[BooksTable]
 
-  private class BooksTable(tag: Tag) extends Table[Book](tag,"BOOK"){
+  private class BooksTable(tag: Tag) extends Table[Book](tag,"book"){
     def id = column[Long]("id",O.PrimaryKey,O.AutoInc)
     def title = column[String]("title")
     def author_id = column[Long]("author_id")
