@@ -1,5 +1,5 @@
 .body-back {
-    background-color: lightskyblue;
+
     width: auto;
 }
 
@@ -12,4 +12,19 @@
 .menuButton {
     width: 100px;
     height: 30px;
+}
+
+.formSize{
+    width: 150px;
+    padding: 5px;
+    display: flex;
+}
+
+.boxSet {
+    float: left;
+    margin: 5px;
+}
+
+.boxContainerSet {
+    display: flex;
 }

@@ -1,23 +1,28 @@
 @(mainTitle: String)
+
 @main("TopPage") {
 	<div class="objectCenter">
 		<h1 align="center">@mainTitle</h1>
 		<table align="center">
 			<tr>
 				<td>入力画面：</td>
-				<td><button class="menuButton" onclick="gotoInput()">遷移</button></td>
+				<td><button class="btn btn-secondary" onclick="gotoInput()">遷移</button></td>
 			</tr>
 			<tr>
 				<td>ウェルカムページ：</td>
-				<td><button class="menuButton" onclick="gotoWellcome()">遷移</button></td>
+				<td><button class="btn btn-secondary" onclick="gotoWellcome()">遷移</button></td>
 			</tr>
 			<tr>
 				<td>カウンター：</td>
-				<td><button class="menuButton" onclick="gotoCount()">遷移</button></td>
+				<td><button class="btn btn-secondary" onclick="gotoCount()">遷移</button></td>
 			</tr>
 			<tr>
 				<td>メッセージ：</td>
-				<td><button class="menuButton" onclick="gotoMessage()">遷移</button></td>
+				<td><button class="btn btn-secondary" onclick="gotoMessage()">遷移</button></td>
+			</tr>
+			<tr>
+				<td>DBアクセステスト：</td>
+				<td><button class="btn btn-secondary" onclick="gotoDBAccess()">遷移</button></td>
 			</tr>
 		</table>
 		<br/>
@@ -29,5 +34,7 @@
 		val val_id:Int = 2;<br/>
 		// 外部から参照できないフィールド<br/>
 		private val private_id = 999;<br/>
+		play-version 2.5.10<br/>
+		use bootstrap: 1.1-P25-B4	play-bootstrap	Play 2.5.6	Bootstrap 4.0.0-alpha	jQuery 2.2.3<br>
 	</div>
 }

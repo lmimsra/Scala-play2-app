@@ -25,8 +25,4 @@ class HomeController @Inject() extends Controller {
     Ok(views.html.top("トップページ"))
   }
 
-  def inputPage = Action{
-    Ok(views.html.input("入力ページ"))
-  }
-
 }

@@ -2,7 +2,8 @@
 * This template takes a single argument, a String containing a
 * message to display.
 *@
-@(message: String)
+@(inputForm: Form[User])(implicit messages: Messages)
+@import b4.vertical.fieldConstructor
 @*
 * Call the `main` template with two arguments. The first
 * argument is a `String` with the title of the page, the second
@@ -10,16 +11,38 @@
 *@
 @main("InputPage") {
 	<div>
-		<h1>@message</h1>
-		<form action="/output" method="post">
-			名前:<input type="text" name="name"><br>
-			年齢:<input type="text" name="age"><br>
-			性別:<input type="radio" name="sex" value="male">男 <input type="radio" name="sex" value="female">女<br>
-			誕生日:<input type="text" name="other.birthday"><br/>
-			住所:<input type="text" name="other.place"><br/>
-			趣味:<input type="text" name="other.hobby"><br/>
-			<input type="submit" value="送信">
-		</form>
-		<button onclick="gotoTop()">トップに戻る</button>
+		<h1>インプットしてくださいな</h1>
+		@*<form action="/output" method="post">*@
+		@*名前:<input type="text" name="name" required><br>*@
+		@*年齢:<input type="number" name="age" required><br>*@
+		@*性別:<input type="radio" name="sex" value="male">男 <input type="radio" name="sex" value="female" >女<br>*@
+		@*誕生日:<input type="text" name="other.birthday" required><br/>*@
+		@*住所:<input type="text" name="other.place" required><br/>*@
+		@*趣味:<input type="text" name="other.hobby" required><br/>*@
+		@*<input type="submit" value="送信">*@
+		@*</form>*@
+		@*<button onclick="gotoTop()">トップに戻る</button>*@
+		<div class="formSize">
+		@b4.form(routes.UserController.outputPage, args = 'id -> "inputForm") {
+			@b4.text(inputForm("name"), '_label -> "name")
+			@b4.number(inputForm("age"), '_label -> "age")
+			@b4.radio(inputForm("sex"), options = Seq("man" -> "MAN", "woman" -> "WOMAN"), '_label -> "sex")
+			@b4.text(inputForm("other.hobby"), '_label -> "hobby")
+			@b4.text(inputForm("other.place"), '_label -> "place")
+			@b4.text(inputForm("other.birthday"), '_label -> "input")
+			<div class="boxContainerSet">
+				@b4.submit('class -> "btn btn-default boxSet") {
+					送信
+				}
+				@b4.reset('class -> "btn btn-danger boxSet") {
+					リセット
+				}
+				@b4.button('class -> "btn btn-secondary boxSet") {
+					<div onclick="gotoTop()">戻る</div>
+				}
+			</div>
+		</div>
+		}
+
 	</div>
 }

@@ -8,11 +8,12 @@
 	<div>
 		<h1>DB接続ページ</h1>
 		<h3>Insert a book hare</h3>
-		<form action="/insert/book" method="post">
-			<input name="id" type="number" placeholder="input id"/>
-			<input name="title" type="text" placeholder="input title"/>
-			<input name="author_id" type="number" placeholder="input author id"/>
-			<input type="submit"/>
+		<form action="/insert/book" class="formSize" method="post" name="dbform" onsubmit="inputCheck1()">
+			<input class="form-control" style="width: 170px;margin: 1px" name="id" type="number" placeholder="input id" required/>
+			<input class="form-control" style="width: 170px;margin: 1px" name="title" type="text" placeholder="input title" required/>
+			<input class="form-control" style="width: 170px;margin: 1px" name="author_id" type="number" placeholder="input author id" required/>
+			<input class="btn btn-secondary" style="margin-left: 20px" type="submit"/><br/>
+			<div id="error_ms" style="color: red"></div>
 		</form>
 
 		<h3>all tables</h3>
@@ -24,6 +25,6 @@
 		</table>
 
 
-		<button onclick="gotoTop()">トップページに戻る</button>
+		<button class="btn btn-secondary" onclick="gotoTop()">トップページに戻る</button>
 	</div>
 }

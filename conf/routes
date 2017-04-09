@@ -14,7 +14,7 @@ GET         /assets/*file        controllers.Assets.versioned(path="/public", fi
 
 GET         /                    controllers.HomeController.topPage
 
-GET         /input               controllers.HomeController.inputPage
+GET         /input               controllers.UserController.initialise
 
 POST        /output              controllers.UserController.outputPage
 
